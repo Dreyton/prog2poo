@@ -3,6 +3,7 @@ import java.util.Locale;
 public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
+		//Locale.setDefault(Locale.forLanguageTag("pt-br"));
 		int idade;
 		double altura;
 		String nome;
@@ -21,20 +22,7 @@ public class Program {
 		System.out.println("Nome: " + nome + 
 				", Idade: " + idade + 
 				", Altura: " + altura + 
-				", Sexo: " + sexo);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+				", Sexo: " + sexo);	
 	}
 }
+
