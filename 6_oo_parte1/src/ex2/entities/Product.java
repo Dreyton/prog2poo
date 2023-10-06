@@ -1,6 +1,6 @@
 package ex2.entities;
 
-public class Product {
+public class Product{
 	public String name;
 	public double price;
 	public int quantity;
@@ -17,6 +17,10 @@ public class Product {
 		this.quantity -= quantity;
 	}
 
-
-
+	@Override
+	public String toString() {
+		
+		return String.format("Product data: %s, $ %.2f, %d units, Total: % .2f%n%n",
+				          name, price, quantity, totalValueInStock());
+	}
 }

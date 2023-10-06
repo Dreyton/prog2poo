@@ -12,12 +12,13 @@ public class Program2 {
 		Scanner sc = new Scanner(System.in);
 
 		Triangle x = new Triangle();
-
+System.out.println(x);
 		System.out.println("Enter the measures of triangle X: ");
 		x.a = sc.nextDouble();
 		x.b = sc.nextDouble();
 		x.c = sc.nextDouble();
 		double areaX = x.area();
+		
 
 		Triangle y = new Triangle();
 
