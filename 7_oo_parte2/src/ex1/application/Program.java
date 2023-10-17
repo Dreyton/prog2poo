@@ -3,6 +3,8 @@ package ex1.application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import ex1.entities.Account;
+
 public class Program {
 
 	public static void main(String[] args) {
@@ -17,26 +19,32 @@ public class Program {
 		System.out.print("Is there an initial deposit (y/n)? ");
 		String resp = sc.next();
 		
-		double value;
+		double value = 0.0;
+		Account a = new Account(number, holder, value);
 		if(resp.equalsIgnoreCase("y")) {
 			System.out.print("Enter initial deposit value: ");
 			value = sc.nextDouble();
+			a.deposit(value);
 		}
 		
 		System.out.println("Account data: ");
-		//System.out.printf("Account %d, Holder, %s, Balance: $ %.2f%n%n", , ,);
+		System.out.println(a);
 		
 		System.out.print("Enter a deposit value: ");
 		value = sc.nextDouble();
+		a.deposit(value);
 		
 		System.out.println("Updated ccount data: ");
-		//System.out.printf("Account %d, Holder, %s, Balance: $ %.2f%n%n", , ,);
+		System.out.println(a);
 		
 		System.out.print("Enter a withdraw value: ");
 		value = sc.nextDouble();
+		a.withdraw(value);
 		
 		System.out.println("Updated ccount data: ");
-		//System.out.printf("Account %d, Holder, %s, Balance: $ %.2f%n%n", , ,);
+		System.out.println(a);
+		
+		sc.close();
 		
 	}
 
