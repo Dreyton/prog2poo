@@ -44,5 +44,7 @@ public class Employee {
 				String.format("%.2f", salary);
 	}
 	
-	
+	public void increaseSalary(double percentage) {
+		this.salary = (1 + percentage)*this.salary;
+	}
 }

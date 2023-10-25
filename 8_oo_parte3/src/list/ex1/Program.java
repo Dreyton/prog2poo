@@ -24,7 +24,13 @@ public class Program {
 			String name = sc.nextLine();
 			System.out.print("Salary: ");
 			double salary = sc.nextDouble();
-
+			
+			while(hasId(list, id)) {
+				System.out.println("There is at least an employee with this id!");
+				System.out.print("NEW Id: ");
+				id = sc.nextInt();
+			}
+			
 			Employee e = new Employee(id, name, salary);
 			list.add(e);
 		}
@@ -44,7 +50,12 @@ public class Program {
 				return true;
 		}
 
-		return false;	
+		return false;
 	}
 
 }
+
+
+
+
+
