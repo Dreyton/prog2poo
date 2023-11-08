@@ -22,9 +22,9 @@ public class BusinessAccount extends Account {
 
 	public void loan(double amount) {
 		if (amount <= loanLimit) {
-			//this.deposit(amount);
-			//this.withdraw(10.0);
-			balance += amount - 10.0;
+			this.deposit(amount);
+			this.withdraw(10.0);
+			//balance += amount - 10.0;
 		}
 	}
 

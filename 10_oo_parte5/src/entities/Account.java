@@ -3,7 +3,7 @@ package entities;
 public class Account extends Object{
 	private Integer number;
 	private String holder;
-	protected Double balance;
+	private Double balance;
 	
 	public Account() {
 		
@@ -42,6 +42,11 @@ public class Account extends Object{
 
 	public Double getBalance() {
 		return balance;
+	}
+
+	@Override
+	public String toString() {
+		return "Account [number=" + number + ", holder=" + holder + ", balance=" + balance + "]";
 	}
 	
 	
